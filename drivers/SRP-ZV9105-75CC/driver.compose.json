@@ -12,7 +12,7 @@
   ],
   "images": {
     "large": "{{driverAssetsPath}}/images/large.jpg",
-    "small": "{{driverAssetsPath}}/images/small.jpg"
+    "small": "{{driverAssetsPath}}/images/small.png"
   },
   "zwave": {
     "manufacturerId": 816,

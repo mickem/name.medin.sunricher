@@ -53,7 +53,7 @@
       ],
       "images": {
         "large": "/drivers/SRP-ZV9105-75CC/assets/images/large.jpg",
-        "small": "/drivers/SRP-ZV9105-75CC/assets/images/small.jpg"
+        "small": "/drivers/SRP-ZV9105-75CC/assets/images/small.png"
       },
       "zwave": {
         "manufacturerId": 816,
