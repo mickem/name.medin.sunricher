@@ -1,0 +1,255 @@
+[
+    {
+        "id": "power-on-behavior",
+        "type": "dropdown",
+        "label": {
+            "en": "Saving load state before power failure"
+        },
+        "hint": {
+            "en": "Saving load state before power failure."
+        },
+        "zwave": {
+            "index": 2,
+            "size": 1
+        },
+        "value": "0",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "shutoff load"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "turn on load"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "save load state before power failure"
+                }
+            }
+        ]
+    },
+    {
+        "id": "send_basic_report",
+        "type": "dropdown",
+        "label": {
+            "en": "Enable/disable to send the basic report"
+        },
+        "hint": {
+            "en": "Enable/disable to send the basic report to the Lifeline when the load state changed (When value set as 1, re-power on the dimmer, it will send Basic report automatically"
+        },
+        "zwave": {
+            "index": 3,
+            "size": 1
+        },
+        "value": "1",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "Disable to send Basic report"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "Enable to send Basic report"
+                }
+            }
+        ]
+    },
+    {
+        "id": "type_of_light",
+        "type": "dropdown",
+        "label": {
+            "en": "Select the type of the light band"
+        },
+        "hint": {
+            "en": "Select the type of the light band"
+        },
+        "zwave": {
+            "index": 4,
+            "size": 1
+        },
+        "value": "2",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "single color light band, 4 channels PWM output to drive 4 channels single color light band"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "CCT light band, 2 channels PWM output, R(B) controls warm white, G(W) controls cool white"
+                }
+            },
+            {
+                "id": "2",
+                "label": {
+                    "en": "RGBW light band, 4 channels PWM output to drive RGBW light band"
+                }
+            }
+        ]
+    },
+    {
+        "id": "stage-mode",
+        "type": "dropdown",
+        "label": {
+            "en": "Choose a cool light stage mode"
+        },
+        "hint": {
+            "en": "receiving Command Class Switch Color, or switching light band type, it recovers to normal lighting mode.)\nRemarks: When parameter number 4 is set as single color light band, the valid values of this parameter are 0~2."
+        },
+        "zwave": {
+            "index": 5,
+            "size": 1
+        },
+        "value": "0",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "inactive of light stage mode"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "fade in and fade out mode, colors set by parameter 8"
+                }
+            },
+            {
+                "id": "2",
+                "label": {
+                    "en": "flash mode, colors set by parameter 8"
+                }
+            },
+            {
+                "id": "3",
+                "label": {
+                    "en": "rainbow mode, system fixed changing effect"
+                }
+            },
+            {
+                "id": "4",
+                "label": {
+                    "en": "fade in and fade out mode, color changes randomly"
+                }
+            },
+            {
+                "id": "5",
+                "label": {
+                    "en": "flash mode, color changes randomly"
+                }
+            },
+            {
+                "id": "6",
+                "label": {
+                    "en": "rainbow mode, color changes randomly"
+                }
+            },
+            {
+                "id": "7",
+                "label": {
+                    "en": "random mode, the colors switch randomly"
+                }
+            }
+        ]
+    },
+    {
+        "id": "stage-delay",
+        "type": "number",
+        "label": {
+            "en": "Speed of stage mode"
+        },
+        "hint": {
+            "en": "0 is the slowest, 255(0xFF) is the fastest"
+        },
+        "zwave": {
+            "index": 6,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        },
+        "value": 243
+    },
+    {
+        "id": "stage-execution-time",
+        "type": "number",
+        "label": {
+            "en": "Execution times of stage mode"
+        },
+        "hint": {
+            "en": "0=unlimited times, 1~255=execution times 1~255"
+        },
+        "zwave": {
+            "index": 7,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        },
+        "value": 0
+    },
+    {
+        "id": "hue-stage-mode",
+        "type": "number",
+        "label": {
+            "en": "The hue of stage mode"
+        },
+        "hint": {
+            "en": "The hue is only valid for fade in and fade out mode, flash mode"
+        },
+        "zwave": {
+            "index": 8,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        },
+        "value": 0
+    },
+    {
+        "id": "enable-removal",
+        "type": "dropdown",
+        "label": {
+            "en": "Enable/disable external switch to be added to and removed from a network"
+        },
+        "hint": {
+            "en": "Enable/disable external switch to be added to and removed from a network (when enables this function, triple press the external switch within 1.5 seconds to be added to or removed from a network)"
+        },
+        "zwave": {
+            "index": 9,
+            "size": 1
+        },
+        "value": "0",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "Disable"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "Enable"
+                }
+            }
+        ]
+    }
+]

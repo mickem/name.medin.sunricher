@@ -1,0 +1,122 @@
+{
+  "id": "name.medin.sunricher",
+  "name": {
+    "en": "Sunricher"
+  },
+  "brandColor": "#000000",
+  "sdk": 2,
+  "version": "1.0.0",
+  "compatibility": ">=1.5.6",
+  "description": {
+    "en": "Sunricher led driver for Homey"
+  },
+  "category": [
+    "lights"
+  ],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Michael Medin",
+    "email": "michael@medin.name"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Michael Medin",
+        "email": "michael@medin.name"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "michaelmedin"
+      }
+    }
+  },
+  "flow": {
+    "actions": [],
+    "triggers": []
+  },
+  "drivers": [
+    {
+      "id": "SRP-ZV9105-75CC",
+      "name": {
+        "en": "Led driver"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "images": {
+        "large": "/drivers/SRP-ZV9105-75CC/assets/images/large.jpg",
+        "small": "/drivers/SRP-ZV9105-75CC/assets/images/small.jpg"
+      },
+      "zwave": {
+        "manufacturerId": 816,
+        "productTypeId": [
+          512
+        ],
+        "productId": [
+          53250
+        ],
+        "zwaveAllianceProductId": 10099,
+        "learnmode": {
+          "image": "/drivers/SRP-ZV9105-75CC/assets/learnmode.svg",
+          "instruction": {
+            "en": "Power on the LED dimmer, make sure the LED dimmer does not belong to any Z-Wave network (please refer to the part “How to check whether the LED dimmer included to a network” of this manual). \n 1) When the connected LED light flashes quickly for 6 seconds, it means the LED dimmer does not belong to any network. Triple press the “Inclusion/Exclusion” button, it will be set into inclusion mode automatically, and waiting to be included.\n2) When the connected LED light is under solid on status, it means the LED dimmer has already been included into a network. First you have to set the LED dimmer into exclusion mode, once excluded, it will be set into inclusion mode automatically, and waiting to be included.\nThe connected LED light stays solid on 3s to indicate successful inclusion."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "defaultConfiguration": []
+      },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "settings": [
+        {
+          "id": "switch_behaviour",
+          "type": "dropdown",
+          "label": {
+            "en": "Saving load state before power failure"
+          },
+          "hint": {
+            "en": "Saving load state before power failure."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "shutoff load"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "turn on load"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "save load state before power failure"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
