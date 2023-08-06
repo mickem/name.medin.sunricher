@@ -251,5 +251,10 @@
                 }
             }
         ]
+    },
+  "capabilitiesOptions": {
+    "onoff": {
+      "setOnDim": false
     }
+  }
 ]

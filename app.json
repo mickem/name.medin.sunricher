@@ -4,9 +4,10 @@
     "en": "Sunricher"
   },
   "brandColor": "#000000",
-  "sdk": 2,
-  "version": "1.0.0",
-  "compatibility": ">=1.5.6",
+  "sdk": 3,
+  "version": "2.0.0",
+  "compatibility": ">=5.0.0",
+  "homeyCommunityTopicId": 16420,
   "description": {
     "en": "Sunricher led driver for Homey"
   },
