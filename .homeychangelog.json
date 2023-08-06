@@ -1,5 +1,8 @@
 {
   "2.0.0": {
     "en": "Upgraded to SDK3 and added support for HP23"
+  },
+  "1.0.0": {
+    "en": "Initial release"
   }
 }
